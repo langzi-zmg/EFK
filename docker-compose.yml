@@ -88,6 +88,13 @@ services:
       - 5601:5601
     depends_on:
       - es01 
+  fluentd:
+    image: fluentd:latest
+    container_name: fluentd
+    environment:
+      - FLUENT_ELASTICSEARCH_HOSTS=192.168.0.3:9200,192.168.0.3:9201,192.168.0.3:9202
+    volumes:
+      - /opt:/opt
 
 volumes:
   data01:
