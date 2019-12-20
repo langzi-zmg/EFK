@@ -1,7 +1,8 @@
 # EFK
 docker-compose
-```
 use dokcer-compose start up es cluster and kibana and fluentd
+```
+docker-compose up -d 
 ```
 log pattern
 ```
